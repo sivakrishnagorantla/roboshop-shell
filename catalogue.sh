@@ -40,6 +40,8 @@ VALIDATE $? "Installing NODEjs"
 # how to improve: first check already exist or not then improve it
 useradd roboshop &>>$LOGFILE
 
+VALIDATE $? "Adding User"
+
 # write a condition directory exist or not
 mkdir /app &>>$LOGFILE
 
@@ -84,7 +86,7 @@ yum install mongodb-org-shell -y &>>$LOGFILE
 
 VALIDATE $? "Installing mongodh client"
 
-mongo --host mongodb.sivakrishnaws.online </app/schema/catalogue.js &>>$LOGFILE
+mongo --host mongodb.sivakrishnawsdevops.online </app/schema/catalogue.js &>>$LOGFILE
 
 VALIDATE $? "Enabling catalogue"
 
