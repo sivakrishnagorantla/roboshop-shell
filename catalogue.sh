@@ -40,12 +40,8 @@ VALIDATE $? "Installing NODEjs"
 # how to improve: first check already exist or not then improve it
 useradd roboshop &>>$LOGFILE
 
-VALIDATE $? "Adding User"
-
 # write a condition directory exist or not
 mkdir /app &>>$LOGFILE
-
-VALIDATE $? "Moving into app directory"
 
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$LOGFILE
 
